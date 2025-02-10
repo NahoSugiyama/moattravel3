@@ -1,5 +1,5 @@
  const imageInput = document.getElementById('imageFile');
- const imagePreview = document.getElementById('imagepreview');
+ const imagepreview = document.getElementById('imagepreview');
  
  imageInput.addEventListener('change', () => {
 	 if(imageInput.files[0]) {
@@ -7,7 +7,7 @@
 		 fileReader.onload = () => {
 			 imagePreview.innerHTML = `<img src="${fileReader.result}" class="mb-3">`;
 		 }
-		 fileReader.resAsDreadAsDataURL(imageInput.files[0]);
+		 fileReader.readAsDataURL(imageInput.files[0]);
 		 
 	 } else {
 		 imagePreview.innerHTML = '';
