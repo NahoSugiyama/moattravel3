@@ -1,6 +1,7 @@
 package com.example.demo.controller;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.FieldError;
 import org.springframework.validation.annotation.Validated;
@@ -23,6 +24,12 @@ public class AuthController {
 	@GetMapping("/login")
 	public String login() {
 		return "auth/login";
+	}
+	
+	@GetMapping("/signup")
+	public String signup(Model model) {
+		model.addAttribute("signupForm", new SignupForm());
+		return "auth/signup";
 	}
 	
 	@PostMapping("/signup")
