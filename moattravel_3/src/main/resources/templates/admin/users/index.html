@@ -55,7 +55,7 @@
 						
 						<div th:if="${userPage.getTotalPages() > 1}" class="d-flex justify-content-center">
 							<nav aria-label="会員一覧ページ">
-								<ul class="pagenation">
+								<ul class="pagination">
 									<li class="page-item">
 										<span th:if="${userPage.isFirst()}" class="page-link disabled">前</span>
 										<a th:unless="${userPage.isFirst()}" th:href="@{/admin/users(page = ${userPage.getNumber() - 1}, keyword = ${keyword})}"
