@@ -55,7 +55,7 @@
 											</div>
 										</div>
 										
-										<div class="row-pb-2 mb-2 border-bottom">
+										<div class="row pb-2 mb-2 border-bottom">
 											<div class="col-4">
 												<span class="fw-bold">宿泊料金</span>
 											</div>
@@ -64,7 +64,7 @@
 											</div>
 										</div>
 										
-										<div class="row pb-2 mb-2 bolder-bottom">
+										<div class="row pb-2 mb-2 border-bottom">
 											<div class="col-4">
 												<span class="fw-bold">定員</span>
 											</div>
@@ -99,7 +99,7 @@
 										</div>
 									</div>
 								</div>
-								<div sec:authorize="isAnoymous()" class="col-lg-4 px-0 ps-lg-4 mb-4">
+								<div sec:authorize="isAnonymous()" class="col-lg-4 px-0 ps-lg-4 mb-4">
 									<div class="card">
 										<div class="card-body">
 											<p class="card-text">予約するには<a th:href="@{/login}">ログイン</a>が必要です。</p>
@@ -116,6 +116,6 @@
 			<div th:replace="~{fragment :: footer}"></div>
 		</div>
 		
-		<div th:replace="~{fragmnet :: scripts}"></div>
+		<div th:replace="~{fragment :: scripts}"></div>
 	</body>
 </html>
