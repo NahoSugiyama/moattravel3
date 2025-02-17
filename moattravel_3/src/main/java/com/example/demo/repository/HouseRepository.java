@@ -8,4 +8,10 @@ import com.example.demo.entity.House;
 
 public interface HouseRepository extends JpaRepository<House, Integer> {
 	public Page<House> findByNameLike(String keyword, Pageable pageable);
+	
+	public Page<House> findByNameLikeOrAddressLike(String nameKeyword, String addressKeyword, Pageable pageable);
+	
+	public Page<House> findByAddressLike(String area, Pageable pageable);
+	
+	public Page<House> findByPriceLessThanEqual(Integer price, Pageable pageable);
 }
