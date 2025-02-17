@@ -41,7 +41,7 @@
 								<form method="get" th:action="@{/houses}" class="w-100">
 									<div class="form-group mb-3">
 										<select class="form-control form-select" name="area">
-											<option value="hidden" >選択してください</option>
+											<option value="" hidden>選択してください</option>
 											<optgroup label="北海道">
 												<option value="北海道" th:selected="${area == '北海道'}">北海道</option>
 											</optgroup>

@@ -33,7 +33,7 @@ public class HouseController {
 		if(keyword != null && !keyword.isEmpty()) {
 			housePage = houseRepository.findByNameLikeOrAddressLike("%" + keyword + "%", "%" + keyword + "%", pageable);
 		} else if (area != null && !area.isEmpty()) {
-			housePage = houseRepository.findByAddressLike("%" + keyword + "%", pageable);
+			housePage = houseRepository.findByAddressLike("%" + area + "%", pageable);
 		} else if (price != null) {
 			housePage = houseRepository.findByPriceLessThanEqual(price, pageable);
 		} else {
