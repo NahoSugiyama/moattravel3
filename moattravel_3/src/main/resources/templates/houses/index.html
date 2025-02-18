@@ -164,7 +164,7 @@
 						+ housePage.getTotalPages() + 'ページ)'}"></p>
 							<p th:unless="${housePage.getTotalPages() > 1}" class="fs-5 mb-3"
 								th:text="${'検索結果:' + housePage.getTotalElements() + '件'}"></p>
-							<form method="get" th:action="@{/houses}" class="mb-3 moattrabel-sort-box">
+							<form method="get" th:action="@{/houses}" class="mb-3 moattravel-sort-box">
 								<input th:if="${keyword}" type="hidden" name="keyword" th:value="${keyword}">
 								<input th:if="${area}" type="hidden" name="area th:value=${area}">
 								<input th:if="${price}" type="hidden" name="price" th:value="${price}">
